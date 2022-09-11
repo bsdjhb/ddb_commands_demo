@@ -35,12 +35,12 @@ static struct db_command_table db_demo_table =
 /* Defines a "demo" top-level command. */
 _DB_SET(_cmd, demo, NULL, db_cmd_table, 0, &db_demo_table);
 
-DB_FUNC(one, db_demo_one_cmd, db_demo_table, 0, NULL)
+_DB_FUNC(_demo, one, db_demo_one_cmd, db_demo_table, 0, NULL)
 {
 	db_printf("one\n");
 }
 
-DB_FUNC(two, db_demo_two_cmd, db_demo_table, 0, NULL)
+_DB_FUNC(_demo, two, db_demo_two_cmd, db_demo_table, 0, NULL)
 {
 	db_printf("two\n");
 }
